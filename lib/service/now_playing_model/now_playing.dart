@@ -1,16 +1,18 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'now_playing.g.dart';
+
 @JsonSerializable()
 class NowPlaying {
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'dates')
   final Dates? dates;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'page')
   final int? page;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'results')
   final List<Results>? results;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'total_pages')
   final int? totalPages;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'total_results')
   final int? totalResults;
 
   const NowPlaying(
@@ -28,47 +30,47 @@ class NowPlaying {
 
 @JsonSerializable()
 class Dates {
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'maximum')
   final String? maximum;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'minimum')
   final String? minimum;
 
   const Dates({this.maximum, this.minimum});
 
-  factory Dates.fromJson(Map<String, dynamic> json) => _$DateFromJson(json);
+  factory Dates.fromJson(Map<String, dynamic> json) => _$DatesFromJson(json);
 
-  Map<String, dynamic> toJson() => _$DateToJson(this);
+  Map<String, dynamic> toJson() => _$DatesToJson(this);
 }
 
 @JsonSerializable()
 class Results {
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'adult')
   final bool? adult;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'backdrop_path')
   final String? backdropPath;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'genre_ids')
   final List<int>? genreIds;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'id')
   final int? id;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'original_language')
   final String? originalLanguage;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'original_title')
   final String? originalTitle;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'overview')
   final String? overview;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'popularity')
   final double? popularity;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'poster_path')
   final String? posterPath;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'release_date')
   final String? releaseDate;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'title')
   final String? title;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'video')
   final bool? video;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'vote_average')
   final double? voteAverage;
-  @JsonKey(name: 'app_version_android')
+  @JsonKey(name: 'vote_count')
   final int? voteCount;
 
   const Results(

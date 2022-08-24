@@ -1,9 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:movie_bloc/util/app_logger.dart';
 
-class AppBlocObserver extends BlocObserver{
+class AppBlocObserver extends BlocObserver {
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
-    // logger.e('${bloc.runtimeType} error: $error $stackTrace');
+    logger.e('${bloc.runtimeType} error: $error $stackTrace');
     super.onError(bloc, error, stackTrace);
   }
 

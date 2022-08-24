@@ -1,23 +1,24 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_bloc/view/home_page.dart';
+import 'package:flutter/services.dart';
+import 'package:get_it/get_it.dart';
+import 'package:movie_bloc/app.dart';
+import 'package:movie_bloc/observer_bloc/app_bloc_observer.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'di/inject.dart';
+
+GetIt getIt = GetIt.instance;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setupGetIt();
+  BlocOverrides.runZoned(
+    () async {
+      await SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp],
+      );
+      runApp(const MyApp());
+    },
+    blocObserver: AppBlocObserver(),
+  );
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
-
