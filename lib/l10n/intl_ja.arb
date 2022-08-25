@@ -1,0 +1,10 @@
+{
+  "error": "error",
+  "back": "back",
+  "ok": "ok",
+  "request_send_timeout": "Request send timeOut",
+  "request_cancelled": "Request Cancelled",
+  "request_fail_due_internet": "Request Fail Due Internet",
+  "request_connect_timeout": "Request Connect Timeout",
+  "request_receive_timeout": "Request Receive Timeout"
+}
