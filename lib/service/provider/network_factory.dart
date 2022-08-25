@@ -117,4 +117,7 @@ class NetworkFactory {
   Future<HttpRawRes> getListNowPlaying() async {
     return await requestApi(_dio.get(API.list_now_playing));
   }
+  Future<HttpRawRes> getListGenres() async {
+    return await requestApi(_dio.get(API.list_genres));
+  }
 }

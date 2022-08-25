@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:movie_bloc/service/model/httpRaw.dart';
-import 'package:movie_bloc/service/now_playing_model/now_playing.dart';
 import 'package:movie_bloc/service/provider/network_factory.dart';
+import 'package:movie_bloc/service/response/now_playing_model/now_playing.dart';
 
 class NowPlayingRepository {
   final NetworkFactory _networkFactory;

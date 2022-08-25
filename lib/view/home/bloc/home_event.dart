@@ -6,3 +6,5 @@ abstract class HomeEvent extends Equatable {
 }
 
 class GetListNowPlaying extends HomeEvent {}
+
+class GetListGenres extends HomeEvent {}
